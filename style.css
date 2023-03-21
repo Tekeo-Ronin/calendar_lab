@@ -37,10 +37,6 @@ body {
   margin: 0 0 10px 0;
 }
 
-.calendar-week_days {
-  display: flex;
-  justify-content: space-around;
-}
 .week-day {
   display: inline-block;
   width: 25px;
@@ -81,4 +77,8 @@ body {
 .flat {
   display: flex;
   flex-direction: column;
+}
+
+.flat > .week-day {
+  display: none;
 }
