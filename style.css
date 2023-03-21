@@ -8,27 +8,26 @@ body {
   background-color: #b5b5b5;
 }
 
-.flatBtn {
+.flatBtn,
+.calendar {
   background-color: #29323f;
   font-family: "Dosis", sans-serif;
-  font-size: 20px;
-  color: #fcee6d;
   width: 290px;
-  padding: 10px;
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.6);
   border-radius: 5px;
+}
+
+.flatBtn {
+  font-size: 20px;
+  color: #fcee6d;
+  padding: 10px;
   margin-bottom: 30px;
   cursor: pointer;
 }
 
 .calendar {
-  background-color: #29323f;
-  font-family: "Dosis", sans-serif;
   color: #fff;
-  width: 290px;
   padding: 45px;
-  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.6);
-  border-radius: 5px;
 }
 
 .calendar-title {
@@ -68,6 +67,7 @@ body {
 .day::before {
   counter-increment: my-counter;
   content: counter(my-counter);
+  text-align: right;
 }
 
 .first_day {
@@ -81,4 +81,44 @@ body {
 
 .flat > .week-day {
   display: none;
+}
+
+.flat > .po::after,
+.wt::after,
+.sr::after,
+.cz::after,
+.pi::after,
+.so::after,
+.ni::after {
+  position: absolute;
+  margin-left: 20px;
+  color: #999;
+}
+
+.flat > .po::after {
+  content: "Po";
+}
+
+.flat > .wt::after {
+  content: "Wt";
+}
+
+.flat > .sr::after {
+  content: "Śr";
+}
+
+.flat > .cz::after {
+  content: "Cz";
+}
+
+.flat > .pi::after {
+  content: "Pi";
+}
+
+.flat > .so::after {
+  content: "So";
+}
+
+.flat > .ni::after {
+  content: "Ni";
 }
